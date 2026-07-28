@@ -1,0 +1,248 @@
+/* ==========================================
+   Twinks n Lors DigitalFix Solutions
+   animations.css
+========================================== */
+/* ==========================================
+   Global Transitions
+========================================== */
+*{
+    transition: all .3s ease;
+}
+/* ==========================================
+   Fade In Up
+========================================== */
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.fade-up{
+    animation:fadeInUp .8s ease forwards;
+}
+/* ==========================================
+   Fade In
+========================================== */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.fade{
+    animation:fadeIn .8s ease forwards;
+}
+/* ==========================================
+   Zoom In
+========================================== */
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+.zoom-in{
+    animation:zoomIn .6s ease forwards;
+}
+/* ==========================================
+   Floating Effect
+========================================== */
+@keyframes floating{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.float{
+    animation:floating 4s ease-in-out infinite;
+}
+/* ==========================================
+   Hero Background Animation
+========================================== */
+@keyframes heroGradient{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+.hero{
+    background-size:200% 200%;
+    animation:heroGradient 12s ease infinite;
+}
+/* ==========================================
+   Service Card Hover
+========================================== */
+.service-card{
+    transition:.35s ease;
+}
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+/* ==========================================
+   Portfolio Hover
+========================================== */
+.portfolio-card{
+    overflow:hidden;
+}
+.portfolio-card img{
+    transition:.5s ease;
+}
+.portfolio-card:hover img{
+    transform:scale(1.08);
+}
+/* ==========================================
+   Button Animation
+========================================== */
+.btn{
+    transition:.3s;
+}
+.btn:hover{
+    transform:translateY(-3px);
+}
+/* ==========================================
+   Navigation Hover
+========================================== */
+.nav-link{
+    position:relative;
+}
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#ff9800;
+    transition:.3s;
+}
+.nav-link:hover::after{
+    width:100%;
+}
+.nav-link.active::after{
+    width:100%;
+}
+
+/* ==========================================
+   Scroll Animation
+========================================== */
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+}
+.show{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .8s ease;
+}
+/* ==========================================
+   Pulse Button
+========================================== */
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(255,152,0,.6);
+    }
+    70%{
+        box-shadow:0 0 0 20px rgba(255,152,0,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(255,152,0,0);
+    }
+}
+.pulse{
+    animation:pulse 2s infinite;
+}
+/* ==========================================
+   Rotate Icon
+========================================== */
+.rotate:hover{
+    transform:rotate(360deg);
+}
+/* ==========================================
+   Bounce
+========================================== */
+@keyframes bounce{
+    0%,20%,50%,80%,100%{
+        transform:translateY(0);
+    }
+    40%{
+        transform:translateY(-15px);
+    }
+    60%{
+        transform:translateY(-8px);
+    }
+}
+.bounce{
+    animation:bounce 2s infinite;
+}
+/* ==========================================
+   Slide In Left
+========================================== */
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.slide-left{
+    animation:slideLeft .8s ease forwards;
+}
+/* ==========================================
+   Slide In Right
+========================================== */
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.slide-right{
+    animation:slideRight .8s ease forwards;
+}
+/* ==========================================
+   Smooth Image Hover
+========================================== */
+img{
+    transition:.4s ease;
+}
+img:hover{
+    transform:scale(1.02);
+}
+/* ==========================================
+   Back To Top Button
+========================================== */
+#topButton{
+    transition:.3s ease;
+}
+#topButton:hover{
+    background:#e68900;
+    transform:scale(1.1);
+}
